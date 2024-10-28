@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <IsPackable>True</IsPackable>
+    <DefineConstants>$(DefineConstants);RESHARPER</DefineConstants>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.ReSharper.SDK" Version="$(SdkVersion)" PrivateAssets="all" />
+    <PackageReference Include="Wave" Version="$(WaveVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\..\dependencies.json" PackagePath="" Pack="true" Visible="false" />
+    <Content Include="bin\$(AssemblyName)\$(Configuration)\$(AssemblyName).dll" PackagePath="dotFiles" Pack="true" Visible="false" />
+    <Content Include="bin\$(AssemblyName)\$(Configuration)\$(AssemblyName).pdb" PackagePath="dotFiles" Pack="true" Visible="false" />
+
+    <!-- TODO: add additional assemblies -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="JetBrains.dotCover.Interactive.Core">
+      <HintPath>..\..\..\..\..\..\.gradle\caches\8.8\transforms\4047dea5330c930b1b5593796acba417\transformed\riderRD-2024.2\plugins\dotCover\DotFiles\JetBrains.dotCover.Interactive.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

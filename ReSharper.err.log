@@ -1,0 +1,867 @@
+16:50:32.703 |W|                               | :1                 | The system cannot find the file specified.
+
+--- EXCEPTION #1/2 [FileNotFoundException]
+Message = “The system cannot find the file specified.”
+ExceptionPath = Root.InnerException
+ClassName = System.IO.FileNotFoundException
+Data.Win32ErrorCode = 2
+Data.HResult = WIN32_ERROR_FILE_NOT_FOUND=80070002
+Data.Path = “C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\PrivateAssemblies\ru\Microsoft.VisualStudio.ExpressionHost.resources.dll”
+Data.ThreadLocalDebugInfo = AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask
+HResult = COR_E_FILENOTFOUND=E_FILENOTFOUND=WIN32_ERROR_FILE_NOT_FOUND=80070002
+Source = JetBrains.Platform.Core
+StackTraceString = “
+  в JetBrains.Util.Win32FileSystemInteraction.ThrowByError(WinError errorCode, FileSystemPath path, String additionalData, Int32 retryCount) in ThrowByError.il:line IL_0000 mvid B174
+     в JetBrains.Util.Win32FileSystemInteraction.GetFileModificationTimeUtc(FileSystemPath thіs) in GetFileModificationTimeUtc.il:line IL_0017 mvid B174
+     в JetBrains.Metadata.Reader.API.AssemblyLocationEx.GetModificationTimeUtc(IAssemblyLocation assemblyLocation) in GetModificationTimeUtc.il:line IL_0020 mvid 7A2A
+     в JetBrains.Metadata.Access.ILReader.ILReaderMetadataProvider.GetFromAssemblyLocation(IAssemblyLocation assemblyLocation, Func`1 checkForInterrupt) in GetFromAssemblyLocation.il:line IL_000D mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadAssemblyModule(IAssemblyLocation assemblyLocation, IMetadataAccess access, MetadataToken moduleToken, Func`2 loadReferencedAssembly, Boolean loadElementTypes, Func`1 checkForInterrupt) in LoadAssemblyModule.il:line IL_0062 mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadFrom(IAssemblyLocation assemblyLocation, Func`2 loadReferencedAssembly, Boolean loadElementTypes) in LoadFrom.il:line IL_001C mvid 7A2A
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+”
+
+--- Outer ---
+
+--- EXCEPTION #2/2 [LoggerException]
+Message = “The system cannot find the file specified.”
+ExceptionPath = Root
+ClassName = JetBrains.Util.LoggerException
+InnerException = “Exception #1 at Root.InnerException”
+HResult = COR_E_APPLICATION=80131600
+StackTraceString = “
+  в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.FetchXamlUIDesignerLocalizedName(Int32 localeId, IVsEnvironmentInformation vsEnvironmentInformation) in FetchXamlUIDesignerLocalizedName.il:line IL_0087 mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.InitOnPrimaryThread() in InitOnPrimaryThread.il:line IL_003C mvid B0DF
+     в JetBrains.Application.Extensibility.CatalogWithAdditionalInitOnAnotherThreadComponents.InitValueDescriptor.CreateInstance(Object[] dependencies) in CreateInstance.il:line IL_003E mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.CreateInstanceWithReadLock() in CreateInstanceWithReadLock.il:line IL_0040 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.TryGetSyncImpl() in TryGetSyncImpl.il:line IL_00DD mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.StateWithPriorityCache`1.TryGetSync() in TryGetSync.il:line IL_0010 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryActivate(Object[] dependencyValues) in TryActivate.il:line IL_0023 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryGetOrCreateValue() in TryGetOrCreateValue.il:line IL_002B mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.GetValue() in GetValue.il:line IL_0021 mvid 3079
+     в JetBrains.Application.Components.InitializationStrategyBase.InitDescriptorSync(Lifetime lifetime, IComponentContainer container, IComponentDescriptor descriptor, ContainerStrategyStage stage) in InitDescriptorSync.il:line IL_000E mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafeSync|34_2(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<<CreateDescriptorAsync>b__0>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<CreateDescriptorAsync>b__0() in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в System.Threading.Tasks.Task`1.InnerInvoke() in InnerInvoke.il:line IL_000F mvid CAB4
+     в System.Threading.Tasks.Task.Execute() in Execute.il:line IL_0010 mvid CAB4
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot) in ExecuteWithThreadLocal.il:line IL_00E1 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution) in ExecuteEntry.il:line IL_0096 mvid CAB4
+     в JetBrains.Application.Components.AsyncParallelLifecycleInitializationStrategy.PriorityMainScheduler.PumpOnce() in PumpOnce.il:line IL_000F mvid 3079
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask).Execute(Action ) in Execute.il:line IL_0006 mvid 99A0
+     в JetBrains.Threading.ReentrancyGuard.Execute(String name, Action action) in Execute.il:line IL_00E1 mvid B174
+     в JetBrains.Threading.ReentrancyGuard.ExecutePendingActions() in ExecutePendingActions.il:line IL_0066 mvid B174
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(ReentrancyGuard.ExecutePendingActions).Execute(Action ) in Execute.il:line IL_0006 mvid 99A0
+     в JetBrains.Threading.JetDispatcher.Closure.Execute() in Execute.il:line IL_0174 mvid B174
+     в JetBrains.Threading.JetDispatcher.ProcessQueue(Int32 nMinBucket, Int32 nProcessQueueGeneration) in ProcessQueue.il:line IL_01D6 mvid B174
+     в System.Windows.Threading.DispatcherOperation.InvokeDelegateCore() in InvokeDelegateCore.il:line IL_0012 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.InvokeImpl() in InvokeImpl.il:line IL_0062 mvid CD3A or InvokeImpl.il:line IL_007A mvid CD3A
+     в MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(Object obj) in CallbackWrapper.il:line IL_0022 mvid CD3A
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в MS.Internal.CulturePreservingExecutionContext.Run(CulturePreservingExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0034 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.Invoke() in Invoke.il:line IL_0020 mvid CD3A
+     в System.Windows.Threading.Dispatcher.ProcessQueue() in ProcessQueue.il:line IL_00F6 mvid CD3A
+     в System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProcHook.il:line IL_0090 mvid CD3A
+     в MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProc.il:line IL_0030 mvid CD3A
+     в MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o) in DispatcherCallbackOperation.il:line IL_0036 mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs) in InternalRealCall.il:line IL_0077 mvid CD3A or InternalRealCall.il:line IL_008E mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler) in TryCatchWhen.il:line IL_0002 mvid CD3A
+     в System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs) in LegacyInvokeImpl.il:line IL_00BB mvid CD3A
+     в MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam) in SubclassWndProc.il:line IL_0130 mvid CD3A
+     в MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+     в MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+     в System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame) in PushFrameImpl.il:line IL_0040 mvid CD3A
+     в System.Windows.Window.ShowHelper(Object booleanBox) in ShowHelper.il:line IL_0118 mvid BEA2
+     в System.Windows.Window.ShowDialog() in ShowDialog.il:line IL_018A mvid BEA2
+     в Microsoft.Internal.VisualStudio.PlatformUI.WindowHelper.ShowModal(Window window, IntPtr parent) in ShowModal.il:line IL_00FC mvid E507
+     в Microsoft.VisualStudio.CommonIDE.ProductKeyDialogLauncher.LaunchProductKeyDialogHelper(IVsLicensingState licensingState, IVsProductKeyDialogLauncherCallback callback, TelemetryActivity telemetryActivity) in LaunchProductKeyDialogHelper.il:line IL_003E mvid 946B
+     в Microsoft.VisualStudio.LicenseManagement.Interop.IVsValidateClientRightsCallback.OnClientRightsComputed(IVsClientRights clientRights)
+     в Microsoft.VisualStudio.LicenseManagement.Interop.IVsValidateClientRightsCallback.OnClientRightsComputed(IVsClientRights clientRights)
+     в Microsoft.VisualStudio.ProductLicensing.VsLicensingState.<>c__DisplayClass74_0.<<ValidateClientRights>b__1>d.MoveNext() in ValidateClientRights.il:line IL_006F mvid F331
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Runtime.CompilerServices.AsyncMethodBuilderCore.MoveNextRunner.Run() in Run.il:line IL_0024 mvid CAB4
+     в Microsoft.VisualStudio.Threading.JoinableTaskFactory.SingleExecuteProtector.TryExecute() in TryExecute.il:line IL_004B mvid 5A13
+     в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs) in InternalRealCall.il:line IL_0077 mvid CD3A or InternalRealCall.il:line IL_008E mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler) in TryCatchWhen.il:line IL_0002 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.InvokeImpl() in InvokeImpl.il:line IL_0062 mvid CD3A or InvokeImpl.il:line IL_007A mvid CD3A
+     в MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(Object obj) in CallbackWrapper.il:line IL_0022 mvid CD3A
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в MS.Internal.CulturePreservingExecutionContext.Run(CulturePreservingExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0034 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.Invoke() in Invoke.il:line IL_0020 mvid CD3A
+     в System.Windows.Threading.Dispatcher.ProcessQueue() in ProcessQueue.il:line IL_00F6 mvid CD3A
+     в System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProcHook.il:line IL_0090 mvid CD3A
+     в MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProc.il:line IL_0030 mvid CD3A
+     в MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o) in DispatcherCallbackOperation.il:line IL_0036 mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs) in InternalRealCall.il:line IL_0077 mvid CD3A or InternalRealCall.il:line IL_008E mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler) in TryCatchWhen.il:line IL_0002 mvid CD3A
+     в System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs) in LegacyInvokeImpl.il:line IL_00BB mvid CD3A
+     в MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam) in SubclassWndProc.il:line IL_0130 mvid CD3A
+”
+
+16:50:32.820 |W|                               | :1                 | The system cannot find the path specified.
+
+--- EXCEPTION #1/2 [DirectoryNotFoundException]
+Message = “The system cannot find the path specified.”
+ExceptionPath = Root.InnerException
+ClassName = System.IO.DirectoryNotFoundException
+Data.Win32ErrorCode = 3
+Data.HResult = COR_E_DIRECTORYNOTFOUND=80070003
+Data.Path = “C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\PrivateAssemblies\ru-RU\Microsoft.VisualStudio.ExpressionHost.resources.dll”
+Data.ThreadLocalDebugInfo = AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask
+HResult = COR_E_DIRECTORYNOTFOUND=E_PATHNOTFOUND=WIN32_ERROR_PATH_NOT_FOUND=80070003
+Source = JetBrains.Platform.Core
+StackTraceString = “
+  в JetBrains.Util.Win32FileSystemInteraction.ThrowByError(WinError errorCode, FileSystemPath path, String additionalData, Int32 retryCount) in ThrowByError.il:line IL_0000 mvid B174
+     в JetBrains.Util.Win32FileSystemInteraction.GetFileModificationTimeUtc(FileSystemPath thіs) in GetFileModificationTimeUtc.il:line IL_0017 mvid B174
+     в JetBrains.Metadata.Reader.API.AssemblyLocationEx.GetModificationTimeUtc(IAssemblyLocation assemblyLocation) in GetModificationTimeUtc.il:line IL_0020 mvid 7A2A
+     в JetBrains.Metadata.Access.ILReader.ILReaderMetadataProvider.GetFromAssemblyLocation(IAssemblyLocation assemblyLocation, Func`1 checkForInterrupt) in GetFromAssemblyLocation.il:line IL_000D mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadAssemblyModule(IAssemblyLocation assemblyLocation, IMetadataAccess access, MetadataToken moduleToken, Func`2 loadReferencedAssembly, Boolean loadElementTypes, Func`1 checkForInterrupt) in LoadAssemblyModule.il:line IL_0062 mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadFrom(IAssemblyLocation assemblyLocation, Func`2 loadReferencedAssembly, Boolean loadElementTypes) in LoadFrom.il:line IL_001C mvid 7A2A
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+”
+
+--- Outer ---
+
+--- EXCEPTION #2/2 [LoggerException]
+Message = “The system cannot find the path specified.”
+ExceptionPath = Root
+ClassName = JetBrains.Util.LoggerException
+InnerException = “Exception #1 at Root.InnerException”
+HResult = COR_E_APPLICATION=80131600
+StackTraceString = “
+  в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.FetchXamlUIDesignerLocalizedName(Int32 localeId, IVsEnvironmentInformation vsEnvironmentInformation) in FetchXamlUIDesignerLocalizedName.il:line IL_0087 mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.InitOnPrimaryThread() in InitOnPrimaryThread.il:line IL_003C mvid B0DF
+     в JetBrains.Application.Extensibility.CatalogWithAdditionalInitOnAnotherThreadComponents.InitValueDescriptor.CreateInstance(Object[] dependencies) in CreateInstance.il:line IL_003E mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.CreateInstanceWithReadLock() in CreateInstanceWithReadLock.il:line IL_0040 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.TryGetSyncImpl() in TryGetSyncImpl.il:line IL_00DD mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.StateWithPriorityCache`1.TryGetSync() in TryGetSync.il:line IL_0010 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryActivate(Object[] dependencyValues) in TryActivate.il:line IL_0023 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryGetOrCreateValue() in TryGetOrCreateValue.il:line IL_002B mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.GetValue() in GetValue.il:line IL_0021 mvid 3079
+     в JetBrains.Application.Components.InitializationStrategyBase.InitDescriptorSync(Lifetime lifetime, IComponentContainer container, IComponentDescriptor descriptor, ContainerStrategyStage stage) in InitDescriptorSync.il:line IL_000E mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafeSync|34_2(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<<CreateDescriptorAsync>b__0>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<CreateDescriptorAsync>b__0() in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в System.Threading.Tasks.Task`1.InnerInvoke() in InnerInvoke.il:line IL_000F mvid CAB4
+     в System.Threading.Tasks.Task.Execute() in Execute.il:line IL_0010 mvid CAB4
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot) in ExecuteWithThreadLocal.il:line IL_00E1 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution) in ExecuteEntry.il:line IL_0096 mvid CAB4
+     в JetBrains.Application.Components.AsyncParallelLifecycleInitializationStrategy.PriorityMainScheduler.PumpOnce() in PumpOnce.il:line IL_000F mvid 3079
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask).Execute(Action ) in Execute.il:line IL_0006 mvid 99A0
+     в JetBrains.Threading.ReentrancyGuard.Execute(String name, Action action) in Execute.il:line IL_00E1 mvid B174
+     в JetBrains.Threading.ReentrancyGuard.ExecutePendingActions() in ExecutePendingActions.il:line IL_0066 mvid B174
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(ReentrancyGuard.ExecutePendingActions).Execute(Action ) in Execute.il:line IL_0006 mvid 99A0
+     в JetBrains.Threading.JetDispatcher.Closure.Execute() in Execute.il:line IL_0174 mvid B174
+     в JetBrains.Threading.JetDispatcher.ProcessQueue(Int32 nMinBucket, Int32 nProcessQueueGeneration) in ProcessQueue.il:line IL_01D6 mvid B174
+     в System.Windows.Threading.DispatcherOperation.InvokeDelegateCore() in InvokeDelegateCore.il:line IL_0012 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.InvokeImpl() in InvokeImpl.il:line IL_0062 mvid CD3A or InvokeImpl.il:line IL_007A mvid CD3A
+     в MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(Object obj) in CallbackWrapper.il:line IL_0022 mvid CD3A
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в MS.Internal.CulturePreservingExecutionContext.Run(CulturePreservingExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0034 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.Invoke() in Invoke.il:line IL_0020 mvid CD3A
+     в System.Windows.Threading.Dispatcher.ProcessQueue() in ProcessQueue.il:line IL_00F6 mvid CD3A
+     в System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProcHook.il:line IL_0090 mvid CD3A
+     в MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProc.il:line IL_0030 mvid CD3A
+     в MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o) in DispatcherCallbackOperation.il:line IL_0036 mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs) in InternalRealCall.il:line IL_0077 mvid CD3A or InternalRealCall.il:line IL_008E mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler) in TryCatchWhen.il:line IL_0002 mvid CD3A
+     в System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs) in LegacyInvokeImpl.il:line IL_00BB mvid CD3A
+     в MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam) in SubclassWndProc.il:line IL_0130 mvid CD3A
+     в MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+     в MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+     в System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame) in PushFrameImpl.il:line IL_0040 mvid CD3A
+     в System.Windows.Window.ShowHelper(Object booleanBox) in ShowHelper.il:line IL_0118 mvid BEA2
+     в System.Windows.Window.ShowDialog() in ShowDialog.il:line IL_018A mvid BEA2
+     в Microsoft.Internal.VisualStudio.PlatformUI.WindowHelper.ShowModal(Window window, IntPtr parent) in ShowModal.il:line IL_00FC mvid E507
+     в Microsoft.VisualStudio.CommonIDE.ProductKeyDialogLauncher.LaunchProductKeyDialogHelper(IVsLicensingState licensingState, IVsProductKeyDialogLauncherCallback callback, TelemetryActivity telemetryActivity) in LaunchProductKeyDialogHelper.il:line IL_003E mvid 946B
+     в Microsoft.VisualStudio.LicenseManagement.Interop.IVsValidateClientRightsCallback.OnClientRightsComputed(IVsClientRights clientRights)
+     в Microsoft.VisualStudio.LicenseManagement.Interop.IVsValidateClientRightsCallback.OnClientRightsComputed(IVsClientRights clientRights)
+     в Microsoft.VisualStudio.ProductLicensing.VsLicensingState.<>c__DisplayClass74_0.<<ValidateClientRights>b__1>d.MoveNext() in ValidateClientRights.il:line IL_006F mvid F331
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Runtime.CompilerServices.AsyncMethodBuilderCore.MoveNextRunner.Run() in Run.il:line IL_0024 mvid CAB4
+     в Microsoft.VisualStudio.Threading.JoinableTaskFactory.SingleExecuteProtector.TryExecute() in TryExecute.il:line IL_004B mvid 5A13
+     в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs) in InternalRealCall.il:line IL_0077 mvid CD3A or InternalRealCall.il:line IL_008E mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler) in TryCatchWhen.il:line IL_0002 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.InvokeImpl() in InvokeImpl.il:line IL_0062 mvid CD3A or InvokeImpl.il:line IL_007A mvid CD3A
+     в MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(Object obj) in CallbackWrapper.il:line IL_0022 mvid CD3A
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в MS.Internal.CulturePreservingExecutionContext.Run(CulturePreservingExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0034 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.Invoke() in Invoke.il:line IL_0020 mvid CD3A
+     в System.Windows.Threading.Dispatcher.ProcessQueue() in ProcessQueue.il:line IL_00F6 mvid CD3A
+     в System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProcHook.il:line IL_0090 mvid CD3A
+     в MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProc.il:line IL_0030 mvid CD3A
+     в MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o) in DispatcherCallbackOperation.il:line IL_0036 mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs) in InternalRealCall.il:line IL_0077 mvid CD3A or InternalRealCall.il:line IL_008E mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler) in TryCatchWhen.il:line IL_0002 mvid CD3A
+     в System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs) in LegacyInvokeImpl.il:line IL_00BB mvid CD3A
+     в MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam) in SubclassWndProc.il:line IL_0130 mvid CD3A
+”
+
+16:50:36.447 |W| ReflectionRdActivator         | JetPool(S) #6:53   | JetBrains.VsIntegration.TextControl.VsTextControlChangeUnitFactoryBackToFrontInterop RdExt without bindable children was activated.
+16:52:49.680 |W| JetDispatcher                 | :1                 | The underlying marshaller of JetDispatcher failed to schedule processing of 3 items of the priority Low after enqueueing “ProvingOnRevokingIdleProcessingExternalDriver”.
+16:56:14.637 |W|                               | JetPool(S) #5:25   | I/O error occurred.
+
+--- EXCEPTION #1/2 [IOException]
+Message = “I/O error occurred.”
+ExceptionPath = Root.InnerException
+ClassName = System.IO.IOException
+Data.Win32ErrorCode = 32
+Data.HResult = WIN32_ERROR_SHARING_VIOLATION=80070020
+Data.Path = C:\Users\New\AppData\Local\JetBrains\Shared\vAny\.lpdata\JBAccount
+Data.FreeSpace = 34.6GB
+Data.TotalSpace = 233GB
+HResult = WIN32_ERROR_SHARING_VIOLATION=80070020
+Source = JetBrains.Platform.Core
+StackTraceString = “
+  в JetBrains.Util.Win32FileSystemInteraction.ThrowByError(WinError errorCode, FileSystemPath path, String additionalData, Int32 retryCount) in ThrowByError.il:line IL_0000 mvid B174
+     в JetBrains.Util.Win32FileSystemWriteHandler.OpenStream(FileSystemPath it, FileMode fileMode, FileAccess fileAccess, FileShare fileShare, FileFlagsAndAttributes fileFlagsAndAttributes) in OpenStream.il:line IL_0000 mvid B174
+     в JetBrains.Util.FileSystemInteraction.GetWriteonlyStream(FileSystemPath fileSystemPath, FileMode fileMode, FileShare fileShare) in GetWriteonlyStream.il:line IL_0000 mvid B174
+     в JetBrains.Util.FileSystemPathOpenEx.WriteStreamDenyWrite[T,TFile,TDir](FileSystemPathBase`3 path, Action`1 λWrite) in WriteStreamDenyWrite.il:line IL_0022 mvid B174
+     в JetBrains.Util.Logging.Logger.CatchSilent(Action action) in CatchSilent.il:line IL_000F mvid B174
+”
+
+--- Outer ---
+
+--- EXCEPTION #2/2 [LoggerException]
+Message = “I/O error occurred.”
+ExceptionPath = Root
+ClassName = JetBrains.Util.LoggerException
+InnerException = “Exception #1 at Root.InnerException”
+HResult = COR_E_APPLICATION=80131600
+StackTraceString = “
+  в JetBrains.Util.Logging.Logger.CatchSilent(Action action) in CatchSilent.il:line IL_000F mvid B174
+     в JetBrains.Application.JetBrainsShared.MultipleDataAccess`1.<>c__DisplayClass9_1.<Save>b__0() in MultipleDataAccess.il:line IL_0016 mvid 7F28
+     в JetBrains.Util.Logging.Logger.CatchSilent[TValue](Func`1 func, TValue defaultValue) in CatchSilent.il:line IL_000F mvid B174
+     в JetBrains.Application.JetBrainsShared.MultipleDataAccess`1.Save(T newValue) in Save.il:line IL_0072 mvid 7F28
+     в JetBrains.Util.ILoggerEx.CatchSilent(ILogger thіs, Action action) in CatchSilent.il:line IL_0060 mvid B174
+     в JetBrains.DataFlow.Signal`1.NotifySinks(TValue payload) in NotifySinks.il:line IL_000F mvid B174
+     в JetBrains.DataFlow.Signal`1.FireInternal(TValue value, Object cookie) in FireInternal.il:line IL_0082 mvid B174
+     в Signal(ILicenseData::LicenseDataPersister::SaveSignal).Fire[T0,T1](Action`2 , T0 , T1 ) in Fire.il:line IL_0008 mvid 10C3
+     в JetBrains.DataFlow.Signal`1.Fire(TValue value, Object cookie) in Fire.il:line IL_005C mvid B174
+     в JetBrains.Application.License2.Persistence.LicenseDataPersister.SaveLicenseData(ILicenseData licenseData) in SaveLicenseData.il:line IL_000C mvid 7F28
+     в JetBrains.Application.License2.License2CheckComponent.<>c__DisplayClass21_2.<.ctor>b__14() in License2CheckComponent.il:line IL_002D mvid 7F28
+     в JetBrains.Application.Threading.Tasks.TaskHost.AccessViolationCatcher[T](Delegate funcOrAction) in AccessViolationCatcher.il:line IL_0010 mvid B174
+     в JetBrains.Application.Threading.Tasks.TaskHost.ExecuteJetTask[T](Object state) in ExecuteJetTask.il:line IL_0000 mvid B174
+     в System.Threading.Tasks.Task`1.InnerInvoke() in InnerInvoke.il:line IL_002B mvid CAB4
+     в System.Threading.Tasks.Task.Execute() in Execute.il:line IL_0010 mvid CAB4
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot) in ExecuteWithThreadLocal.il:line IL_00E1 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution) in ExecuteEntry.il:line IL_0096 mvid CAB4
+     в JetBrains.Application.Threading.Tasks.Scheduler.JetScheduler.ExecuteTask(Task task) in ExecuteTask.il:line IL_001C mvid B174
+     в JetBrains.Application.Threading.Tasks.Scheduler.JetSchedulerThread.EnqueueNextTask() in EnqueueNextTask.il:line IL_0015 mvid B174
+     в JetBrains.Application.Threading.Tasks.Scheduler.JetSchedulerThread.ThreadPoolProc() in ThreadPoolProc.il:line IL_0197 mvid B174
+     в JetBrains.Application.Threading.Tasks.Scheduler.JetSchedulerThread.StartProc() in StartProc.il:line IL_0000 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ThreadHelper.ThreadStart() in ThreadStart.il:line IL_002A mvid CAB4
+”
+
+16:56:19.337 |W|                               | :1                 | The system cannot find the file specified.
+
+--- EXCEPTION #1/2 [FileNotFoundException]
+Message = “The system cannot find the file specified.”
+ExceptionPath = Root.InnerException
+ClassName = System.IO.FileNotFoundException
+Data.Win32ErrorCode = 2
+Data.HResult = WIN32_ERROR_FILE_NOT_FOUND=80070002
+Data.Path = “C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PrivateAssemblies\ru\Microsoft.VisualStudio.ExpressionHost.resources.dll”
+Data.ThreadLocalDebugInfo = AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask
+HResult = COR_E_FILENOTFOUND=E_FILENOTFOUND=WIN32_ERROR_FILE_NOT_FOUND=80070002
+Source = JetBrains.Platform.Core
+StackTraceString = “
+  в JetBrains.Util.Win32FileSystemInteraction.ThrowByError(WinError errorCode, FileSystemPath path, String additionalData, Int32 retryCount) in ThrowByError.il:line IL_0000 mvid B174
+     в JetBrains.Util.Win32FileSystemInteraction.GetFileModificationTimeUtc(FileSystemPath thіs) in GetFileModificationTimeUtc.il:line IL_0017 mvid B174
+     в JetBrains.Metadata.Reader.API.AssemblyLocationEx.GetModificationTimeUtc(IAssemblyLocation assemblyLocation) in GetModificationTimeUtc.il:line IL_0020 mvid 7A2A
+     в JetBrains.Metadata.Access.ILReader.ILReaderMetadataProvider.GetFromAssemblyLocation(IAssemblyLocation assemblyLocation, Func`1 checkForInterrupt) in GetFromAssemblyLocation.il:line IL_000D mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadAssemblyModule(IAssemblyLocation assemblyLocation, IMetadataAccess access, MetadataToken moduleToken, Func`2 loadReferencedAssembly, Boolean loadElementTypes, Func`1 checkForInterrupt) in LoadAssemblyModule.il:line IL_0062 mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadFrom(IAssemblyLocation assemblyLocation, Func`2 loadReferencedAssembly, Boolean loadElementTypes) in LoadFrom.il:line IL_001C mvid 7A2A
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+”
+
+--- Outer ---
+
+--- EXCEPTION #2/2 [LoggerException]
+Message = “The system cannot find the file specified.”
+ExceptionPath = Root
+ClassName = JetBrains.Util.LoggerException
+InnerException = “Exception #1 at Root.InnerException”
+HResult = COR_E_APPLICATION=80131600
+StackTraceString = “
+  в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.FetchXamlUIDesignerLocalizedName(Int32 localeId, IVsEnvironmentInformation vsEnvironmentInformation) in FetchXamlUIDesignerLocalizedName.il:line IL_0087 mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.InitOnPrimaryThread() in InitOnPrimaryThread.il:line IL_003C mvid B0DF
+     в JetBrains.Application.Extensibility.CatalogWithAdditionalInitOnAnotherThreadComponents.InitValueDescriptor.CreateInstance(Object[] dependencies) in CreateInstance.il:line IL_003E mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.CreateInstanceWithReadLock() in CreateInstanceWithReadLock.il:line IL_0040 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.TryGetSyncImpl() in TryGetSyncImpl.il:line IL_00DD mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.StateWithPriorityCache`1.TryGetSync() in TryGetSync.il:line IL_0010 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryActivate(Object[] dependencyValues) in TryActivate.il:line IL_0023 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryGetOrCreateValue() in TryGetOrCreateValue.il:line IL_002B mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.GetValue() in GetValue.il:line IL_0021 mvid 3079
+     в JetBrains.Application.Components.InitializationStrategyBase.InitDescriptorSync(Lifetime lifetime, IComponentContainer container, IComponentDescriptor descriptor, ContainerStrategyStage stage) in InitDescriptorSync.il:line IL_000E mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafeSync|34_2(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<<CreateDescriptorAsync>b__0>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<CreateDescriptorAsync>b__0() in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в System.Threading.Tasks.Task`1.InnerInvoke() in InnerInvoke.il:line IL_000F mvid CAB4
+     в System.Threading.Tasks.Task.Execute() in Execute.il:line IL_0010 mvid CAB4
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot) in ExecuteWithThreadLocal.il:line IL_00E1 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution) in ExecuteEntry.il:line IL_0096 mvid CAB4
+     в JetBrains.Application.Components.AsyncParallelLifecycleInitializationStrategy.PriorityMainScheduler.PumpOnce() in PumpOnce.il:line IL_000F mvid 3079
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask).Execute(Action ) in Execute.il:line IL_0006 mvid 10C3
+     в JetBrains.Threading.ReentrancyGuard.Execute(String name, Action action) in Execute.il:line IL_00E1 mvid B174
+     в JetBrains.Threading.ReentrancyGuard.ExecutePendingActions() in ExecutePendingActions.il:line IL_0066 mvid B174
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(ReentrancyGuard.ExecutePendingActions).Execute(Action ) in Execute.il:line IL_0006 mvid 10C3
+     в JetBrains.Threading.JetDispatcher.Closure.Execute() in Execute.il:line IL_0174 mvid B174
+     в JetBrains.Threading.JetDispatcher.ProcessQueue(Int32 nMinBucket, Int32 nProcessQueueGeneration) in ProcessQueue.il:line IL_01D6 mvid B174
+     в JetBrains.Threading.JetDispatcher.ExternalIdleProcessing.OnExternalDriverIdle() in OnExternalDriverIdle.il:line IL_001C mvid B174
+     в JetBrains.VsIntegration.Shell.VsDoIdleDispatcherSink.Microsoft.VisualStudio.OLE.Interop.IOleComponent.FDoIdle(UInt32 grfidlef)
+”
+
+16:56:19.347 |W|                               | :1                 | The system cannot find the path specified.
+
+--- EXCEPTION #1/2 [DirectoryNotFoundException]
+Message = “The system cannot find the path specified.”
+ExceptionPath = Root.InnerException
+ClassName = System.IO.DirectoryNotFoundException
+Data.Win32ErrorCode = 3
+Data.HResult = COR_E_DIRECTORYNOTFOUND=80070003
+Data.Path = “C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PrivateAssemblies\ru-RU\Microsoft.VisualStudio.ExpressionHost.resources.dll”
+Data.ThreadLocalDebugInfo = AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask
+HResult = COR_E_DIRECTORYNOTFOUND=E_PATHNOTFOUND=WIN32_ERROR_PATH_NOT_FOUND=80070003
+Source = JetBrains.Platform.Core
+StackTraceString = “
+  в JetBrains.Util.Win32FileSystemInteraction.ThrowByError(WinError errorCode, FileSystemPath path, String additionalData, Int32 retryCount) in ThrowByError.il:line IL_0000 mvid B174
+     в JetBrains.Util.Win32FileSystemInteraction.GetFileModificationTimeUtc(FileSystemPath thіs) in GetFileModificationTimeUtc.il:line IL_0017 mvid B174
+     в JetBrains.Metadata.Reader.API.AssemblyLocationEx.GetModificationTimeUtc(IAssemblyLocation assemblyLocation) in GetModificationTimeUtc.il:line IL_0020 mvid 7A2A
+     в JetBrains.Metadata.Access.ILReader.ILReaderMetadataProvider.GetFromAssemblyLocation(IAssemblyLocation assemblyLocation, Func`1 checkForInterrupt) in GetFromAssemblyLocation.il:line IL_000D mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadAssemblyModule(IAssemblyLocation assemblyLocation, IMetadataAccess access, MetadataToken moduleToken, Func`2 loadReferencedAssembly, Boolean loadElementTypes, Func`1 checkForInterrupt) in LoadAssemblyModule.il:line IL_0062 mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadFrom(IAssemblyLocation assemblyLocation, Func`2 loadReferencedAssembly, Boolean loadElementTypes) in LoadFrom.il:line IL_001C mvid 7A2A
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+”
+
+--- Outer ---
+
+--- EXCEPTION #2/2 [LoggerException]
+Message = “The system cannot find the path specified.”
+ExceptionPath = Root
+ClassName = JetBrains.Util.LoggerException
+InnerException = “Exception #1 at Root.InnerException”
+HResult = COR_E_APPLICATION=80131600
+StackTraceString = “
+  в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.FetchXamlUIDesignerLocalizedName(Int32 localeId, IVsEnvironmentInformation vsEnvironmentInformation) in FetchXamlUIDesignerLocalizedName.il:line IL_0087 mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.InitOnPrimaryThread() in InitOnPrimaryThread.il:line IL_003C mvid B0DF
+     в JetBrains.Application.Extensibility.CatalogWithAdditionalInitOnAnotherThreadComponents.InitValueDescriptor.CreateInstance(Object[] dependencies) in CreateInstance.il:line IL_003E mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.CreateInstanceWithReadLock() in CreateInstanceWithReadLock.il:line IL_0040 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.TryGetSyncImpl() in TryGetSyncImpl.il:line IL_00DD mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.StateWithPriorityCache`1.TryGetSync() in TryGetSync.il:line IL_0010 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryActivate(Object[] dependencyValues) in TryActivate.il:line IL_0023 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryGetOrCreateValue() in TryGetOrCreateValue.il:line IL_002B mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.GetValue() in GetValue.il:line IL_0021 mvid 3079
+     в JetBrains.Application.Components.InitializationStrategyBase.InitDescriptorSync(Lifetime lifetime, IComponentContainer container, IComponentDescriptor descriptor, ContainerStrategyStage stage) in InitDescriptorSync.il:line IL_000E mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafeSync|34_2(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<<CreateDescriptorAsync>b__0>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<CreateDescriptorAsync>b__0() in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в System.Threading.Tasks.Task`1.InnerInvoke() in InnerInvoke.il:line IL_000F mvid CAB4
+     в System.Threading.Tasks.Task.Execute() in Execute.il:line IL_0010 mvid CAB4
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot) in ExecuteWithThreadLocal.il:line IL_00E1 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution) in ExecuteEntry.il:line IL_0096 mvid CAB4
+     в JetBrains.Application.Components.AsyncParallelLifecycleInitializationStrategy.PriorityMainScheduler.PumpOnce() in PumpOnce.il:line IL_000F mvid 3079
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask).Execute(Action ) in Execute.il:line IL_0006 mvid 10C3
+     в JetBrains.Threading.ReentrancyGuard.Execute(String name, Action action) in Execute.il:line IL_00E1 mvid B174
+     в JetBrains.Threading.ReentrancyGuard.ExecutePendingActions() in ExecutePendingActions.il:line IL_0066 mvid B174
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(ReentrancyGuard.ExecutePendingActions).Execute(Action ) in Execute.il:line IL_0006 mvid 10C3
+     в JetBrains.Threading.JetDispatcher.Closure.Execute() in Execute.il:line IL_0174 mvid B174
+     в JetBrains.Threading.JetDispatcher.ProcessQueue(Int32 nMinBucket, Int32 nProcessQueueGeneration) in ProcessQueue.il:line IL_01D6 mvid B174
+     в JetBrains.Threading.JetDispatcher.ExternalIdleProcessing.OnExternalDriverIdle() in OnExternalDriverIdle.il:line IL_001C mvid B174
+     в JetBrains.VsIntegration.Shell.VsDoIdleDispatcherSink.Microsoft.VisualStudio.OLE.Interop.IOleComponent.FDoIdle(UInt32 grfidlef)
+”
+
+16:56:24.345 |W| ReflectionRdActivator         | JetPool(S) #5:25   | JetBrains.VsIntegration.TextControl.VsTextControlChangeUnitFactoryBackToFrontInterop RdExt without bindable children was activated.
+16:57:29.570 |W| VsShortcutManager             | :1                 | ImportSettings ErrorInfo: Completion status: 2
+Error count: 0
+
+16:57:40.436 |W| IsApplicationActiveState      | :1                 | Current ApplicationActiveState value does not correspond to process of the foreground window. Probably, one or several messages were not delivered to native hooks. Resetting application active state to False; Foreground HWND=402EA(ProcID=3818);
+16:57:46.053 |W| VsInlineParameterNameHintsDisabler| :1                 | Option DisplayAllHintsWhilePressingAltF1 is not found in class Microsoft.CodeAnalysis.InlineHints.InlineHintsOptionsStorage assembly Microsoft.CodeAnalysis.LanguageServer.Protocol. VS API might have been changed. There is no DisplayAllHintsWhilePressingAltF1 field or property in class “Microsoft.CodeAnalysis.InlineHints.InlineHintsOptionsStorage, Microsoft.CodeAnalysis.LanguageServer.Protocol, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+16:57:46.056 |W| VsInlineParameterNameHintsDisabler| :1                 | Option EnabledForParameters is not found in class Microsoft.CodeAnalysis.Editor.InlineHints.InlineHintsViewOptionsStorage assembly Microsoft.CodeAnalysis.EditorFeatures.Wpf. VS API might have been changed. There is no EnabledForParameters field or property in class “Microsoft.CodeAnalysis.Editor.InlineHints.InlineHintsViewOptionsStorage, Microsoft.CodeAnalysis.EditorFeatures.Wpf, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+16:57:46.056 |W| VsInlineParameterNameHintsDisabler| :1                 | Option EnabledForTypes is not found in class Microsoft.CodeAnalysis.Editor.InlineHints.InlineHintsViewOptionsStorage assembly Microsoft.CodeAnalysis.EditorFeatures.Wpf. VS API might have been changed. There is no EnabledForTypes field or property in class “Microsoft.CodeAnalysis.Editor.InlineHints.InlineHintsViewOptionsStorage, Microsoft.CodeAnalysis.EditorFeatures.Wpf, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+16:57:53.789 |W| IsApplicationActiveState      | :1                 | Current ApplicationActiveState value does not correspond to process of the foreground window. Probably, one or several messages were not delivered to native hooks. Resetting application active state to False; Foreground HWND=402EA(ProcID=3818);
+16:57:55.213 |W| IsApplicationActiveState      | :1                 | Current ApplicationActiveState value does not correspond to process of the foreground window. Probably, one or several messages were not delivered to native hooks. Resetting application active state to True; Foreground HWND=1C040C(ProcID=9B8);
+16:58:15.360 |W| VsTextControlInheritanceMarginOptionsSinceVs16| :1                 | Option ShowInheritanceMargin is not found in class Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions assembly Microsoft.CodeAnalysis.EditorFeatures. VS API might have been changed. There is no ShowInheritanceMargin field or property in class “Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions, Microsoft.CodeAnalysis.EditorFeatures, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+16:58:15.519 |W| VsTextControlInheritanceMarginOptionsSinceVs16| :1                 | Option InheritanceMarginCombinedWithIndicatorMargin is not found in class Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions assembly Microsoft.CodeAnalysis.EditorFeatures. VS API might have been changed. There is no InheritanceMarginCombinedWithIndicatorMargin field or property in class “Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions, Microsoft.CodeAnalysis.EditorFeatures, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+16:58:15.549 |W| VsTextControlInheritanceMarginOptionsSinceVs16| :1                 | Option ShowInheritanceMargin is not found in class Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions assembly Microsoft.CodeAnalysis.EditorFeatures. VS API might have been changed. There is no ShowInheritanceMargin field or property in class “Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions, Microsoft.CodeAnalysis.EditorFeatures, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+16:58:15.554 |W| VsTextControlInheritanceMarginOptionsSinceVs16| :1                 | Option InheritanceMarginCombinedWithIndicatorMargin is not found in class Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions assembly Microsoft.CodeAnalysis.EditorFeatures. VS API might have been changed. There is no InheritanceMarginCombinedWithIndicatorMargin field or property in class “Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions, Microsoft.CodeAnalysis.EditorFeatures, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+16:58:47.827 |W|                               | JetPool(S) #2:51   | The system cannot find the file specified.
+16:58:47.827 |W|                               | JetPool(S) #2:51   | The system cannot find the file specified.
+16:58:47.827 |W|                               | JetPool(S) #2:51   | The system cannot find the file specified.
+16:58:47.828 |W|                               | JetPool(S) #2:51   | The system cannot find the file specified.
+16:58:47.828 |W|                               | JetPool(S) #2:51   | The system cannot find the file specified.
+16:58:47.828 |W|                               | JetPool(S) #2:51   | The system cannot find the file specified.
+21:46:30.369 |W|                               | :1                 | The system cannot find the file specified.
+
+--- EXCEPTION #1/2 [FileNotFoundException]
+Message = “The system cannot find the file specified.”
+ExceptionPath = Root.InnerException
+ClassName = System.IO.FileNotFoundException
+Data.Win32ErrorCode = 2
+Data.HResult = WIN32_ERROR_FILE_NOT_FOUND=80070002
+Data.Path = “C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PrivateAssemblies\ru\Microsoft.VisualStudio.ExpressionHost.resources.dll”
+Data.ThreadLocalDebugInfo = AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask
+HResult = COR_E_FILENOTFOUND=E_FILENOTFOUND=WIN32_ERROR_FILE_NOT_FOUND=80070002
+Source = JetBrains.Platform.Core
+StackTraceString = “
+  в JetBrains.Util.Win32FileSystemInteraction.ThrowByError(WinError errorCode, FileSystemPath path, String additionalData, Int32 retryCount) in ThrowByError.il:line IL_0000 mvid B174
+     в JetBrains.Util.Win32FileSystemInteraction.GetFileModificationTimeUtc(FileSystemPath thіs) in GetFileModificationTimeUtc.il:line IL_0017 mvid B174
+     в JetBrains.Metadata.Reader.API.AssemblyLocationEx.GetModificationTimeUtc(IAssemblyLocation assemblyLocation) in GetModificationTimeUtc.il:line IL_0020 mvid 7A2A
+     в JetBrains.Metadata.Access.ILReader.ILReaderMetadataProvider.GetFromAssemblyLocation(IAssemblyLocation assemblyLocation, Func`1 checkForInterrupt) in GetFromAssemblyLocation.il:line IL_000D mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadAssemblyModule(IAssemblyLocation assemblyLocation, IMetadataAccess access, MetadataToken moduleToken, Func`2 loadReferencedAssembly, Boolean loadElementTypes, Func`1 checkForInterrupt) in LoadAssemblyModule.il:line IL_0062 mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadFrom(IAssemblyLocation assemblyLocation, Func`2 loadReferencedAssembly, Boolean loadElementTypes) in LoadFrom.il:line IL_001C mvid 7A2A
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+”
+
+--- Outer ---
+
+--- EXCEPTION #2/2 [LoggerException]
+Message = “The system cannot find the file specified.”
+ExceptionPath = Root
+ClassName = JetBrains.Util.LoggerException
+InnerException = “Exception #1 at Root.InnerException”
+HResult = COR_E_APPLICATION=80131600
+StackTraceString = “
+  в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.FetchXamlUIDesignerLocalizedName(Int32 localeId, IVsEnvironmentInformation vsEnvironmentInformation) in FetchXamlUIDesignerLocalizedName.il:line IL_0087 mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.InitOnPrimaryThread() in InitOnPrimaryThread.il:line IL_003C mvid B0DF
+     в JetBrains.Application.Extensibility.CatalogWithAdditionalInitOnAnotherThreadComponents.InitValueDescriptor.CreateInstance(Object[] dependencies) in CreateInstance.il:line IL_003E mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.CreateInstanceWithReadLock() in CreateInstanceWithReadLock.il:line IL_0040 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.TryGetSyncImpl() in TryGetSyncImpl.il:line IL_00DD mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.StateWithPriorityCache`1.TryGetSync() in TryGetSync.il:line IL_0010 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryActivate(Object[] dependencyValues) in TryActivate.il:line IL_0023 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryGetOrCreateValue() in TryGetOrCreateValue.il:line IL_002B mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.GetValue() in GetValue.il:line IL_0021 mvid 3079
+     в JetBrains.Application.Components.InitializationStrategyBase.InitDescriptorSync(Lifetime lifetime, IComponentContainer container, IComponentDescriptor descriptor, ContainerStrategyStage stage) in InitDescriptorSync.il:line IL_000E mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafeSync|34_2(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<<CreateDescriptorAsync>b__0>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<CreateDescriptorAsync>b__0() in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в System.Threading.Tasks.Task`1.InnerInvoke() in InnerInvoke.il:line IL_000F mvid CAB4
+     в System.Threading.Tasks.Task.Execute() in Execute.il:line IL_0010 mvid CAB4
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot) in ExecuteWithThreadLocal.il:line IL_00E1 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution) in ExecuteEntry.il:line IL_0096 mvid CAB4
+     в JetBrains.Application.Components.AsyncParallelLifecycleInitializationStrategy.PriorityMainScheduler.PumpOnce() in PumpOnce.il:line IL_000F mvid 3079
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask).Execute(Action ) in Execute.il:line IL_0006 mvid 50A4
+     в JetBrains.Threading.ReentrancyGuard.Execute(String name, Action action) in Execute.il:line IL_00E1 mvid B174
+     в JetBrains.Threading.ReentrancyGuard.ExecutePendingActions() in ExecutePendingActions.il:line IL_0066 mvid B174
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(ReentrancyGuard.ExecutePendingActions).Execute(Action ) in Execute.il:line IL_0006 mvid 50A4
+     в JetBrains.Threading.JetDispatcher.Closure.Execute() in Execute.il:line IL_0174 mvid B174
+     в JetBrains.Threading.JetDispatcher.ProcessQueue(Int32 nMinBucket, Int32 nProcessQueueGeneration) in ProcessQueue.il:line IL_01D6 mvid B174
+     в JetBrains.Threading.JetDispatcher.ExternalIdleProcessing.OnExternalDriverIdle() in OnExternalDriverIdle.il:line IL_001C mvid B174
+     в JetBrains.VsIntegration.Shell.VsDoIdleDispatcherSink.Microsoft.VisualStudio.OLE.Interop.IOleComponent.FDoIdle(UInt32 grfidlef)
+”
+
+21:46:30.507 |W|                               | :1                 | The system cannot find the path specified.
+
+--- EXCEPTION #1/2 [DirectoryNotFoundException]
+Message = “The system cannot find the path specified.”
+ExceptionPath = Root.InnerException
+ClassName = System.IO.DirectoryNotFoundException
+Data.Win32ErrorCode = 3
+Data.HResult = COR_E_DIRECTORYNOTFOUND=80070003
+Data.Path = “C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PrivateAssemblies\ru-RU\Microsoft.VisualStudio.ExpressionHost.resources.dll”
+Data.ThreadLocalDebugInfo = AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask
+HResult = COR_E_DIRECTORYNOTFOUND=E_PATHNOTFOUND=WIN32_ERROR_PATH_NOT_FOUND=80070003
+Source = JetBrains.Platform.Core
+StackTraceString = “
+  в JetBrains.Util.Win32FileSystemInteraction.ThrowByError(WinError errorCode, FileSystemPath path, String additionalData, Int32 retryCount) in ThrowByError.il:line IL_0000 mvid B174
+     в JetBrains.Util.Win32FileSystemInteraction.GetFileModificationTimeUtc(FileSystemPath thіs) in GetFileModificationTimeUtc.il:line IL_0017 mvid B174
+     в JetBrains.Metadata.Reader.API.AssemblyLocationEx.GetModificationTimeUtc(IAssemblyLocation assemblyLocation) in GetModificationTimeUtc.il:line IL_0020 mvid 7A2A
+     в JetBrains.Metadata.Access.ILReader.ILReaderMetadataProvider.GetFromAssemblyLocation(IAssemblyLocation assemblyLocation, Func`1 checkForInterrupt) in GetFromAssemblyLocation.il:line IL_000D mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadAssemblyModule(IAssemblyLocation assemblyLocation, IMetadataAccess access, MetadataToken moduleToken, Func`2 loadReferencedAssembly, Boolean loadElementTypes, Func`1 checkForInterrupt) in LoadAssemblyModule.il:line IL_0062 mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadFrom(IAssemblyLocation assemblyLocation, Func`2 loadReferencedAssembly, Boolean loadElementTypes) in LoadFrom.il:line IL_001C mvid 7A2A
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+”
+
+--- Outer ---
+
+--- EXCEPTION #2/2 [LoggerException]
+Message = “The system cannot find the path specified.”
+ExceptionPath = Root
+ClassName = JetBrains.Util.LoggerException
+InnerException = “Exception #1 at Root.InnerException”
+HResult = COR_E_APPLICATION=80131600
+StackTraceString = “
+  в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.FetchXamlUIDesignerLocalizedName(Int32 localeId, IVsEnvironmentInformation vsEnvironmentInformation) in FetchXamlUIDesignerLocalizedName.il:line IL_0087 mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.InitOnPrimaryThread() in InitOnPrimaryThread.il:line IL_003C mvid B0DF
+     в JetBrains.Application.Extensibility.CatalogWithAdditionalInitOnAnotherThreadComponents.InitValueDescriptor.CreateInstance(Object[] dependencies) in CreateInstance.il:line IL_003E mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.CreateInstanceWithReadLock() in CreateInstanceWithReadLock.il:line IL_0040 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.TryGetSyncImpl() in TryGetSyncImpl.il:line IL_00DD mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.StateWithPriorityCache`1.TryGetSync() in TryGetSync.il:line IL_0010 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryActivate(Object[] dependencyValues) in TryActivate.il:line IL_0023 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryGetOrCreateValue() in TryGetOrCreateValue.il:line IL_002B mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.GetValue() in GetValue.il:line IL_0021 mvid 3079
+     в JetBrains.Application.Components.InitializationStrategyBase.InitDescriptorSync(Lifetime lifetime, IComponentContainer container, IComponentDescriptor descriptor, ContainerStrategyStage stage) in InitDescriptorSync.il:line IL_000E mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafeSync|34_2(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<<CreateDescriptorAsync>b__0>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<CreateDescriptorAsync>b__0() in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в System.Threading.Tasks.Task`1.InnerInvoke() in InnerInvoke.il:line IL_000F mvid CAB4
+     в System.Threading.Tasks.Task.Execute() in Execute.il:line IL_0010 mvid CAB4
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot) in ExecuteWithThreadLocal.il:line IL_00E1 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution) in ExecuteEntry.il:line IL_0096 mvid CAB4
+     в JetBrains.Application.Components.AsyncParallelLifecycleInitializationStrategy.PriorityMainScheduler.PumpOnce() in PumpOnce.il:line IL_000F mvid 3079
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask).Execute(Action ) in Execute.il:line IL_0006 mvid 50A4
+     в JetBrains.Threading.ReentrancyGuard.Execute(String name, Action action) in Execute.il:line IL_00E1 mvid B174
+     в JetBrains.Threading.ReentrancyGuard.ExecutePendingActions() in ExecutePendingActions.il:line IL_0066 mvid B174
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(ReentrancyGuard.ExecutePendingActions).Execute(Action ) in Execute.il:line IL_0006 mvid 50A4
+     в JetBrains.Threading.JetDispatcher.Closure.Execute() in Execute.il:line IL_0174 mvid B174
+     в JetBrains.Threading.JetDispatcher.ProcessQueue(Int32 nMinBucket, Int32 nProcessQueueGeneration) in ProcessQueue.il:line IL_01D6 mvid B174
+     в JetBrains.Threading.JetDispatcher.ExternalIdleProcessing.OnExternalDriverIdle() in OnExternalDriverIdle.il:line IL_001C mvid B174
+     в JetBrains.VsIntegration.Shell.VsDoIdleDispatcherSink.Microsoft.VisualStudio.OLE.Interop.IOleComponent.FDoIdle(UInt32 grfidlef)
+”
+
+21:46:34.992 |W| ReflectionRdActivator         | JetPool(S) #7:89   | JetBrains.VsIntegration.TextControl.VsTextControlChangeUnitFactoryBackToFrontInterop RdExt without bindable children was activated.
+21:46:37.997 |W| IsApplicationActiveState      | :1                 | Current ApplicationActiveState value does not correspond to process of the foreground window. Probably, one or several messages were not delivered to native hooks. Resetting application active state to False; Foreground HWND=300E4(ProcID=1740);
+21:46:57.162 |W| VsInlineParameterNameHintsDisabler| :1                 | Option DisplayAllHintsWhilePressingAltF1 is not found in class Microsoft.CodeAnalysis.InlineHints.InlineHintsOptionsStorage assembly Microsoft.CodeAnalysis.LanguageServer.Protocol. VS API might have been changed. There is no DisplayAllHintsWhilePressingAltF1 field or property in class “Microsoft.CodeAnalysis.InlineHints.InlineHintsOptionsStorage, Microsoft.CodeAnalysis.LanguageServer.Protocol, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+21:46:57.172 |W| VsInlineParameterNameHintsDisabler| :1                 | Option EnabledForParameters is not found in class Microsoft.CodeAnalysis.Editor.InlineHints.InlineHintsViewOptionsStorage assembly Microsoft.CodeAnalysis.EditorFeatures.Wpf. VS API might have been changed. There is no EnabledForParameters field or property in class “Microsoft.CodeAnalysis.Editor.InlineHints.InlineHintsViewOptionsStorage, Microsoft.CodeAnalysis.EditorFeatures.Wpf, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+21:46:57.172 |W| VsInlineParameterNameHintsDisabler| :1                 | Option EnabledForTypes is not found in class Microsoft.CodeAnalysis.Editor.InlineHints.InlineHintsViewOptionsStorage assembly Microsoft.CodeAnalysis.EditorFeatures.Wpf. VS API might have been changed. There is no EnabledForTypes field or property in class “Microsoft.CodeAnalysis.Editor.InlineHints.InlineHintsViewOptionsStorage, Microsoft.CodeAnalysis.EditorFeatures.Wpf, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+21:47:24.975 |W| VsTextControlInheritanceMarginOptionsSinceVs16| :1                 | Option ShowInheritanceMargin is not found in class Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions assembly Microsoft.CodeAnalysis.EditorFeatures. VS API might have been changed. There is no ShowInheritanceMargin field or property in class “Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions, Microsoft.CodeAnalysis.EditorFeatures, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+21:47:25.093 |W| VsTextControlInheritanceMarginOptionsSinceVs16| :1                 | Option InheritanceMarginCombinedWithIndicatorMargin is not found in class Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions assembly Microsoft.CodeAnalysis.EditorFeatures. VS API might have been changed. There is no InheritanceMarginCombinedWithIndicatorMargin field or property in class “Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions, Microsoft.CodeAnalysis.EditorFeatures, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+21:48:05.183 |W| JetDispatcher                 | :1                 | The underlying marshaller of JetDispatcher failed to schedule processing of 3 items of the priority Low after enqueueing “ProvingOnRevokingIdleProcessingExternalDriver”.
+21:48:30.025 |W|                               | :1                 | The system cannot find the file specified.
+
+--- EXCEPTION #1/2 [FileNotFoundException]
+Message = “The system cannot find the file specified.”
+ExceptionPath = Root.InnerException
+ClassName = System.IO.FileNotFoundException
+Data.Win32ErrorCode = 2
+Data.HResult = WIN32_ERROR_FILE_NOT_FOUND=80070002
+Data.Path = “C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PrivateAssemblies\ru\Microsoft.VisualStudio.ExpressionHost.resources.dll”
+Data.ThreadLocalDebugInfo = AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask
+HResult = COR_E_FILENOTFOUND=E_FILENOTFOUND=WIN32_ERROR_FILE_NOT_FOUND=80070002
+Source = JetBrains.Platform.Core
+StackTraceString = “
+  в JetBrains.Util.Win32FileSystemInteraction.ThrowByError(WinError errorCode, FileSystemPath path, String additionalData, Int32 retryCount) in ThrowByError.il:line IL_0000 mvid B174
+     в JetBrains.Util.Win32FileSystemInteraction.GetFileModificationTimeUtc(FileSystemPath thіs) in GetFileModificationTimeUtc.il:line IL_0017 mvid B174
+     в JetBrains.Metadata.Reader.API.AssemblyLocationEx.GetModificationTimeUtc(IAssemblyLocation assemblyLocation) in GetModificationTimeUtc.il:line IL_0020 mvid 7A2A
+     в JetBrains.Metadata.Access.ILReader.ILReaderMetadataProvider.GetFromAssemblyLocation(IAssemblyLocation assemblyLocation, Func`1 checkForInterrupt) in GetFromAssemblyLocation.il:line IL_000D mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadAssemblyModule(IAssemblyLocation assemblyLocation, IMetadataAccess access, MetadataToken moduleToken, Func`2 loadReferencedAssembly, Boolean loadElementTypes, Func`1 checkForInterrupt) in LoadAssemblyModule.il:line IL_0062 mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadFrom(IAssemblyLocation assemblyLocation, Func`2 loadReferencedAssembly, Boolean loadElementTypes) in LoadFrom.il:line IL_001C mvid 7A2A
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+”
+
+--- Outer ---
+
+--- EXCEPTION #2/2 [LoggerException]
+Message = “The system cannot find the file specified.”
+ExceptionPath = Root
+ClassName = JetBrains.Util.LoggerException
+InnerException = “Exception #1 at Root.InnerException”
+HResult = COR_E_APPLICATION=80131600
+StackTraceString = “
+  в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.FetchXamlUIDesignerLocalizedName(Int32 localeId, IVsEnvironmentInformation vsEnvironmentInformation) in FetchXamlUIDesignerLocalizedName.il:line IL_0087 mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.InitOnPrimaryThread() in InitOnPrimaryThread.il:line IL_003C mvid B0DF
+     в JetBrains.Application.Extensibility.CatalogWithAdditionalInitOnAnotherThreadComponents.InitValueDescriptor.CreateInstance(Object[] dependencies) in CreateInstance.il:line IL_003E mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.CreateInstanceWithReadLock() in CreateInstanceWithReadLock.il:line IL_0040 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.TryGetSyncImpl() in TryGetSyncImpl.il:line IL_00DD mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.StateWithPriorityCache`1.TryGetSync() in TryGetSync.il:line IL_0010 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryActivate(Object[] dependencyValues) in TryActivate.il:line IL_0023 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryGetOrCreateValue() in TryGetOrCreateValue.il:line IL_002B mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.GetValue() in GetValue.il:line IL_0021 mvid 3079
+     в JetBrains.Application.Components.InitializationStrategyBase.InitDescriptorSync(Lifetime lifetime, IComponentContainer container, IComponentDescriptor descriptor, ContainerStrategyStage stage) in InitDescriptorSync.il:line IL_000E mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafeSync|34_2(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<<CreateDescriptorAsync>b__0>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<CreateDescriptorAsync>b__0() in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в System.Threading.Tasks.Task`1.InnerInvoke() in InnerInvoke.il:line IL_000F mvid CAB4
+     в System.Threading.Tasks.Task.Execute() in Execute.il:line IL_0010 mvid CAB4
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot) in ExecuteWithThreadLocal.il:line IL_00E1 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution) in ExecuteEntry.il:line IL_0096 mvid CAB4
+     в JetBrains.Application.Components.AsyncParallelLifecycleInitializationStrategy.PriorityMainScheduler.PumpOnce() in PumpOnce.il:line IL_000F mvid 3079
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask).Execute(Action ) in Execute.il:line IL_0006 mvid BD9D
+     в JetBrains.Threading.ReentrancyGuard.Execute(String name, Action action) in Execute.il:line IL_00E1 mvid B174
+     в JetBrains.Threading.ReentrancyGuard.ExecutePendingActions() in ExecutePendingActions.il:line IL_0066 mvid B174
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(ReentrancyGuard.ExecutePendingActions).Execute(Action ) in Execute.il:line IL_0006 mvid BD9D
+     в JetBrains.Threading.JetDispatcher.Closure.Execute() in Execute.il:line IL_0174 mvid B174
+     в JetBrains.Threading.JetDispatcher.ProcessQueue(Int32 nMinBucket, Int32 nProcessQueueGeneration) in ProcessQueue.il:line IL_01D6 mvid B174
+     в System.Windows.Threading.DispatcherOperation.InvokeDelegateCore() in InvokeDelegateCore.il:line IL_0012 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.InvokeImpl() in InvokeImpl.il:line IL_0062 mvid CD3A or InvokeImpl.il:line IL_007A mvid CD3A
+     в MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(Object obj) in CallbackWrapper.il:line IL_0022 mvid CD3A
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в MS.Internal.CulturePreservingExecutionContext.Run(CulturePreservingExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0034 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.Invoke() in Invoke.il:line IL_0020 mvid CD3A
+     в System.Windows.Threading.Dispatcher.ProcessQueue() in ProcessQueue.il:line IL_00F6 mvid CD3A
+     в System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProcHook.il:line IL_0090 mvid CD3A
+     в MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProc.il:line IL_0030 mvid CD3A
+     в MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o) in DispatcherCallbackOperation.il:line IL_0036 mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs) in InternalRealCall.il:line IL_0077 mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler) in TryCatchWhen.il:line IL_0002 mvid CD3A
+     в System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs) in LegacyInvokeImpl.il:line IL_00BB mvid CD3A
+     в MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam) in SubclassWndProc.il:line IL_0130 mvid CD3A
+     в Microsoft.VisualStudio.Shell.Interop.IVsUIDataSource.Invoke(String verb, Object pvaIn, Object& pvaOut)
+     в Microsoft.VisualStudio.Shell.Interop.IVsUIDataSource.Invoke(String verb, Object pvaIn, Object& pvaOut)
+     в Microsoft.VisualStudio.PlatformUI.VsCommand.Execute(Object parameter) in Execute.il:line IL_001C mvid A369
+     в MS.Internal.Commands.CommandHelpers.CriticalExecuteCommandSource(ICommandSource commandSource, Boolean userInitiated) in CriticalExecuteCommandSource.il:line IL_0051 mvid BEA2
+     в System.Windows.Controls.MenuItem.InvokeClickAfterRender(Object arg) in InvokeClickAfterRender.il:line IL_001F mvid BEA2
+     в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs) in InternalRealCall.il:line IL_0077 mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler) in TryCatchWhen.il:line IL_0002 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.InvokeImpl() in InvokeImpl.il:line IL_0062 mvid CD3A or InvokeImpl.il:line IL_007A mvid CD3A
+     в MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(Object obj) in CallbackWrapper.il:line IL_0022 mvid CD3A
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в MS.Internal.CulturePreservingExecutionContext.Run(CulturePreservingExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0034 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.Invoke() in Invoke.il:line IL_0020 mvid CD3A
+     в System.Windows.Threading.Dispatcher.ProcessQueue() in ProcessQueue.il:line IL_00F6 mvid CD3A
+     в System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProcHook.il:line IL_0090 mvid CD3A
+     в MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProc.il:line IL_0030 mvid CD3A
+     в MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o) in DispatcherCallbackOperation.il:line IL_0036 mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs) in InternalRealCall.il:line IL_0077 mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler) in TryCatchWhen.il:line IL_0002 mvid CD3A
+     в System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs) in LegacyInvokeImpl.il:line IL_00BB mvid CD3A
+     в MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam) in SubclassWndProc.il:line IL_0130 mvid CD3A
+”
+
+21:48:30.161 |W|                               | :1                 | The system cannot find the path specified.
+
+--- EXCEPTION #1/2 [DirectoryNotFoundException]
+Message = “The system cannot find the path specified.”
+ExceptionPath = Root.InnerException
+ClassName = System.IO.DirectoryNotFoundException
+Data.Win32ErrorCode = 3
+Data.HResult = COR_E_DIRECTORYNOTFOUND=80070003
+Data.Path = “C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PrivateAssemblies\ru-RU\Microsoft.VisualStudio.ExpressionHost.resources.dll”
+Data.ThreadLocalDebugInfo = AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask
+HResult = COR_E_DIRECTORYNOTFOUND=E_PATHNOTFOUND=WIN32_ERROR_PATH_NOT_FOUND=80070003
+Source = JetBrains.Platform.Core
+StackTraceString = “
+  в JetBrains.Util.Win32FileSystemInteraction.ThrowByError(WinError errorCode, FileSystemPath path, String additionalData, Int32 retryCount) in ThrowByError.il:line IL_0000 mvid B174
+     в JetBrains.Util.Win32FileSystemInteraction.GetFileModificationTimeUtc(FileSystemPath thіs) in GetFileModificationTimeUtc.il:line IL_0017 mvid B174
+     в JetBrains.Metadata.Reader.API.AssemblyLocationEx.GetModificationTimeUtc(IAssemblyLocation assemblyLocation) in GetModificationTimeUtc.il:line IL_0020 mvid 7A2A
+     в JetBrains.Metadata.Access.ILReader.ILReaderMetadataProvider.GetFromAssemblyLocation(IAssemblyLocation assemblyLocation, Func`1 checkForInterrupt) in GetFromAssemblyLocation.il:line IL_000D mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadAssemblyModule(IAssemblyLocation assemblyLocation, IMetadataAccess access, MetadataToken moduleToken, Func`2 loadReferencedAssembly, Boolean loadElementTypes, Func`1 checkForInterrupt) in LoadAssemblyModule.il:line IL_0062 mvid 7A2A
+     в JetBrains.Metadata.Reader.API.MetadataLoader.LoadFrom(IAssemblyLocation assemblyLocation, Func`2 loadReferencedAssembly, Boolean loadElementTypes) in LoadFrom.il:line IL_001C mvid 7A2A
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+”
+
+--- Outer ---
+
+--- EXCEPTION #2/2 [LoggerException]
+Message = “The system cannot find the path specified.”
+ExceptionPath = Root
+ClassName = JetBrains.Util.LoggerException
+InnerException = “Exception #1 at Root.InnerException”
+HResult = COR_E_APPLICATION=80131600
+StackTraceString = “
+  в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.GetXamlUIDesignerLocalizedName(FileSystemPath dllPath, String resourceName) in GetXamlUIDesignerLocalizedName.il:line IL_000A mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.FetchXamlUIDesignerLocalizedName(Int32 localeId, IVsEnvironmentInformation vsEnvironmentInformation) in FetchXamlUIDesignerLocalizedName.il:line IL_0087 mvid B0DF
+     в JetBrains.VsIntegration.Shell.ActionManagement.VsLocalizer.InitOnPrimaryThread() in InitOnPrimaryThread.il:line IL_003C mvid B0DF
+     в JetBrains.Application.Extensibility.CatalogWithAdditionalInitOnAnotherThreadComponents.InitValueDescriptor.CreateInstance(Object[] dependencies) in CreateInstance.il:line IL_003E mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.CreateInstanceWithReadLock() in CreateInstanceWithReadLock.il:line IL_0040 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.ActivatingComponentState.TryGetSyncImpl() in TryGetSyncImpl.il:line IL_00DD mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.StateWithPriorityCache`1.TryGetSync() in TryGetSync.il:line IL_0010 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryActivate(Object[] dependencyValues) in TryActivate.il:line IL_0023 mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.TryGetOrCreateValue() in TryGetOrCreateValue.il:line IL_002B mvid 3079
+     в JetBrains.Application.Components.AsyncDescriptorBase.GetValue() in GetValue.il:line IL_0021 mvid 3079
+     в JetBrains.Application.Components.InitializationStrategyBase.InitDescriptorSync(Lifetime lifetime, IComponentContainer container, IComponentDescriptor descriptor, ContainerStrategyStage stage) in InitDescriptorSync.il:line IL_000E mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafeSync|34_2(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<CreateDescriptorAsync>g__CreateValueDescriptorSafe|34_1(Lifetime lifetime, IComponentContainer container, ContainerStrategyStage stage, IValueDescriptor descriptor, TaskPriority taskPriority, ILogger logger) in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<<CreateDescriptorAsync>b__0>d.MoveNext() in CreateDescriptorAsync.il:line IL_000E mvid 3079 or CreateDescriptorAsync.il:line IL_0044 mvid 3079
+     в System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start[TStateMachine](TStateMachine& stateMachine) in Start.il:line IL_002C mvid CAB4
+     в JetBrains.Application.Components.AsyncInitializationStrategyBase.<>c__DisplayClass34_0.<CreateDescriptorAsync>b__0() in AsyncInitializationStrategyBase.il:line IL_001C mvid 3079 or AsyncInitializationStrategyBase.il:line IL_002D mvid 3079 or AsyncInitializationStrategyBase.il:line IL_0046 mvid 3079
+     в System.Threading.Tasks.Task`1.InnerInvoke() in InnerInvoke.il:line IL_000F mvid CAB4
+     в System.Threading.Tasks.Task.Execute() in Execute.il:line IL_0010 mvid CAB4
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot) in ExecuteWithThreadLocal.il:line IL_00E1 mvid CAB4
+     в System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution) in ExecuteEntry.il:line IL_0096 mvid CAB4
+     в JetBrains.Application.Components.AsyncParallelLifecycleInitializationStrategy.PriorityMainScheduler.PumpOnce() in PumpOnce.il:line IL_000F mvid 3079
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(AsyncParallelLifecycleInitializationStrategy::PriorityMainScheduler::QueueTask).Execute(Action ) in Execute.il:line IL_0006 mvid BD9D
+     в JetBrains.Threading.ReentrancyGuard.Execute(String name, Action action) in Execute.il:line IL_00E1 mvid B174
+     в JetBrains.Threading.ReentrancyGuard.ExecutePendingActions() in ExecutePendingActions.il:line IL_0066 mvid B174
+     в JetBrains.Util.Concurrency.ExecutionContextEx.WithinExecutionContext(Object o) in WithinExecutionContext.il:line IL_0022 mvid B174
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в JetBrains.Util.Concurrency.ExecutionContextEx.Run(ExecutionContext context, Action callback, SynchronizationContext overrideSynchronizationContext) in Run.il:line IL_003F mvid B174
+     в Action(ReentrancyGuard.ExecutePendingActions).Execute(Action ) in Execute.il:line IL_0006 mvid BD9D
+     в JetBrains.Threading.JetDispatcher.Closure.Execute() in Execute.il:line IL_0174 mvid B174
+     в JetBrains.Threading.JetDispatcher.ProcessQueue(Int32 nMinBucket, Int32 nProcessQueueGeneration) in ProcessQueue.il:line IL_01D6 mvid B174
+     в System.Windows.Threading.DispatcherOperation.InvokeDelegateCore() in InvokeDelegateCore.il:line IL_0012 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.InvokeImpl() in InvokeImpl.il:line IL_0062 mvid CD3A or InvokeImpl.il:line IL_007A mvid CD3A
+     в MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(Object obj) in CallbackWrapper.il:line IL_0022 mvid CD3A
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в MS.Internal.CulturePreservingExecutionContext.Run(CulturePreservingExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0034 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.Invoke() in Invoke.il:line IL_0020 mvid CD3A
+     в System.Windows.Threading.Dispatcher.ProcessQueue() in ProcessQueue.il:line IL_00F6 mvid CD3A
+     в System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProcHook.il:line IL_0090 mvid CD3A
+     в MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProc.il:line IL_0030 mvid CD3A
+     в MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o) in DispatcherCallbackOperation.il:line IL_0036 mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs) in InternalRealCall.il:line IL_0077 mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler) in TryCatchWhen.il:line IL_0002 mvid CD3A
+     в System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs) in LegacyInvokeImpl.il:line IL_00BB mvid CD3A
+     в MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam) in SubclassWndProc.il:line IL_0130 mvid CD3A
+     в Microsoft.VisualStudio.Shell.Interop.IVsUIDataSource.Invoke(String verb, Object pvaIn, Object& pvaOut)
+     в Microsoft.VisualStudio.Shell.Interop.IVsUIDataSource.Invoke(String verb, Object pvaIn, Object& pvaOut)
+     в Microsoft.VisualStudio.PlatformUI.VsCommand.Execute(Object parameter) in Execute.il:line IL_001C mvid A369
+     в MS.Internal.Commands.CommandHelpers.CriticalExecuteCommandSource(ICommandSource commandSource, Boolean userInitiated) in CriticalExecuteCommandSource.il:line IL_0051 mvid BEA2
+     в System.Windows.Controls.MenuItem.InvokeClickAfterRender(Object arg) in InvokeClickAfterRender.il:line IL_001F mvid BEA2
+     в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs) in InternalRealCall.il:line IL_0077 mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler) in TryCatchWhen.il:line IL_0002 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.InvokeImpl() in InvokeImpl.il:line IL_0062 mvid CD3A or InvokeImpl.il:line IL_007A mvid CD3A
+     в MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(Object obj) in CallbackWrapper.il:line IL_0022 mvid CD3A
+     в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in RunInternal.il:line IL_0079 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0009 mvid CAB4 or Run.il:line IL_0034 mvid CAB4
+     в MS.Internal.CulturePreservingExecutionContext.Run(CulturePreservingExecutionContext executionContext, ContextCallback callback, Object state) in Run.il:line IL_0034 mvid CD3A
+     в System.Windows.Threading.DispatcherOperation.Invoke() in Invoke.il:line IL_0020 mvid CD3A
+     в System.Windows.Threading.Dispatcher.ProcessQueue() in ProcessQueue.il:line IL_00F6 mvid CD3A
+     в System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProcHook.il:line IL_0090 mvid CD3A
+     в MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled) in WndProc.il:line IL_0030 mvid CD3A
+     в MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o) in DispatcherCallbackOperation.il:line IL_0036 mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs) in InternalRealCall.il:line IL_0077 mvid CD3A
+     в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler) in TryCatchWhen.il:line IL_0002 mvid CD3A
+     в System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs) in LegacyInvokeImpl.il:line IL_00BB mvid CD3A
+     в MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam) in SubclassWndProc.il:line IL_0130 mvid CD3A
+”
+
+21:48:33.709 |W| ReflectionRdActivator         | JetPool(S) #6:78   | JetBrains.VsIntegration.TextControl.VsTextControlChangeUnitFactoryBackToFrontInterop RdExt without bindable children was activated.
+21:49:05.296 |W| VsInlineParameterNameHintsDisabler| :1                 | Option DisplayAllHintsWhilePressingAltF1 is not found in class Microsoft.CodeAnalysis.InlineHints.InlineHintsOptionsStorage assembly Microsoft.CodeAnalysis.LanguageServer.Protocol. VS API might have been changed. There is no DisplayAllHintsWhilePressingAltF1 field or property in class “Microsoft.CodeAnalysis.InlineHints.InlineHintsOptionsStorage, Microsoft.CodeAnalysis.LanguageServer.Protocol, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+21:49:05.298 |W| VsInlineParameterNameHintsDisabler| :1                 | Option EnabledForParameters is not found in class Microsoft.CodeAnalysis.Editor.InlineHints.InlineHintsViewOptionsStorage assembly Microsoft.CodeAnalysis.EditorFeatures.Wpf. VS API might have been changed. There is no EnabledForParameters field or property in class “Microsoft.CodeAnalysis.Editor.InlineHints.InlineHintsViewOptionsStorage, Microsoft.CodeAnalysis.EditorFeatures.Wpf, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+21:49:05.299 |W| VsInlineParameterNameHintsDisabler| :1                 | Option EnabledForTypes is not found in class Microsoft.CodeAnalysis.Editor.InlineHints.InlineHintsViewOptionsStorage assembly Microsoft.CodeAnalysis.EditorFeatures.Wpf. VS API might have been changed. There is no EnabledForTypes field or property in class “Microsoft.CodeAnalysis.Editor.InlineHints.InlineHintsViewOptionsStorage, Microsoft.CodeAnalysis.EditorFeatures.Wpf, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+21:49:29.142 |W| IsApplicationActiveState      | :1                 | Current ApplicationActiveState value does not correspond to process of the foreground window. Probably, one or several messages were not delivered to native hooks. Resetting application active state to False; Foreground HWND=300E4(ProcID=1740);
+21:49:31.554 |W| VsTextControlInheritanceMarginOptionsSinceVs16| :1                 | Option ShowInheritanceMargin is not found in class Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions assembly Microsoft.CodeAnalysis.EditorFeatures. VS API might have been changed. There is no ShowInheritanceMargin field or property in class “Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions, Microsoft.CodeAnalysis.EditorFeatures, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+21:49:31.659 |W| VsTextControlInheritanceMarginOptionsSinceVs16| :1                 | Option InheritanceMarginCombinedWithIndicatorMargin is not found in class Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions assembly Microsoft.CodeAnalysis.EditorFeatures. VS API might have been changed. There is no InheritanceMarginCombinedWithIndicatorMargin field or property in class “Microsoft.CodeAnalysis.Editor.Shared.Options.FeatureOnOffOptions, Microsoft.CodeAnalysis.EditorFeatures, Version=4.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”.
+21:49:52.014 |W| JetDispatcher                 | :1                 | The underlying marshaller of JetDispatcher failed to schedule processing of 4 items of the priority Low after enqueueing “ProvingOnRevokingIdleProcessingExternalDriver”.

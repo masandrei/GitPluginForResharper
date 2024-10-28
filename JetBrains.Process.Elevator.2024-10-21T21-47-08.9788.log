@@ -1,0 +1,66 @@
+[2024-10-21T21-47-08.441653]: <info> Build version: 242.0.19990.21372.2024-09-24T11:52:24
+[2024-10-21T21-47-08.442000]: <info> Connect Host
+[2024-10-21T21-47-08.442036]: <info> Open Host pipe
+[2024-10-21T21-47-08.442078]: <info> Connected to the existing Host process
+[2024-10-21T21-47-08.442337]: <info> Running Host connection loop
+[2024-10-21T21-47-08.442794]: <info> Write protocol version: 257
+[2024-10-21T21-47-08.442842]: <info> Bridge, read answer async
+[2024-10-21T21-47-08.442890]: <info> Bridge, answer received: ok
+[2024-10-21T21-47-08.554253]: <info> Perform process elevation request: C:\Users\New\AppData\Local\JetBrains\Installations\ReSharperPlatformVs17_d65259ddGit_000\windows-x64\JetBrains.Dpa.Collector.exe
+[2024-10-21T21-47-08.554307]: <info> Bridge, write command: elevate_process
+[2024-10-21T21-47-08.554348]: <info> Bridge, read answer async
+[2024-10-21T21-47-08.603944]: <info> Bridge, answer received: elevation_ok
+[2024-10-21T21-47-08.604137]: <info> Process elevation request succeeded
+[2024-10-21T21-47-08.714478]: <info> Request Host directories
+[2024-10-21T21-47-08.714532]: <info> Bridge, write command: get_dirs
+[2024-10-21T21-47-08.714572]: <info> Bridge, read answer async
+[2024-10-21T21-47-08.714779]: <info> Bridge, answer received: ok
+[2024-10-21T21-47-08.718097]: <info> Dump directory: C:\Users\New\JetBrainsTask\NewGitPlugin\Git
+[2024-10-21T21-47-08.718116]: <info> Log directory: C:\Users\New\JetBrainsTask\NewGitPlugin\Git
+[2024-10-21T21-47-08.718126]: <info> Prefix: JetBrains.ETW.Collector.Host
+[2024-10-21T21-47-08.826696]: <info> Request Host directories
+[2024-10-21T21-47-08.826737]: <info> Bridge, write command: get_dirs
+[2024-10-21T21-47-08.826771]: <info> Bridge, read answer async
+[2024-10-21T21-47-08.827185]: <info> Bridge, answer received: ok
+[2024-10-21T21-47-08.831016]: <info> Dump directory: C:\Users\New\JetBrainsTask\NewGitPlugin\Git
+[2024-10-21T21-47-08.831050]: <info> Log directory: C:\Users\New\JetBrainsTask\NewGitPlugin\Git
+[2024-10-21T21-47-08.831069]: <info> Prefix: JetBrains.ETW.Collector.Host
+[2024-10-21T21-47-08.938889]: <info> Request Host directories
+[2024-10-21T21-47-08.938965]: <info> Bridge, write command: get_dirs
+[2024-10-21T21-47-08.939050]: <info> Bridge, read answer async
+[2024-10-21T21-47-08.939445]: <info> Bridge, answer received: ok
+[2024-10-21T21-47-08.944273]: <info> Dump directory: C:\Users\New\JetBrainsTask\NewGitPlugin\Git
+[2024-10-21T21-47-08.944309]: <info> Log directory: C:\Users\New\JetBrainsTask\NewGitPlugin\Git
+[2024-10-21T21-47-08.944330]: <info> Prefix: JetBrains.DPA.Collector
+[2024-10-21T21-47-09.051058]: <info> Request Host directories
+[2024-10-21T21-47-09.051091]: <info> Bridge, write command: get_dirs
+[2024-10-21T21-47-09.051121]: <info> Bridge, read answer async
+[2024-10-21T21-47-09.051314]: <info> Bridge, answer received: ok
+[2024-10-21T21-47-09.051539]: <info> Dump directory: C:\Windows\TEMP\JetDumps
+[2024-10-21T21-47-09.051550]: <info> Log directory: C:\Windows\TEMP\JetLogs
+[2024-10-21T21-47-09.051558]: <info> Prefix: JetBrains.DPA.Collector.exe
+[2024-10-21T21-47-53.269668]: <info> Request Host directories
+[2024-10-21T21-47-53.269720]: <info> Bridge, write command: get_dirs
+[2024-10-21T21-47-53.269755]: <info> Bridge, read answer async
+[2024-10-21T21-47-53.270197]: <info> Bridge, answer received: ok
+[2024-10-21T21-47-53.272110]: <info> Dump directory: C:\Users\New\JetBrainsTask\NewGitPlugin\Git
+[2024-10-21T21-47-53.272126]: <info> Log directory: C:\Users\New\JetBrainsTask\NewGitPlugin\Git
+[2024-10-21T21-47-53.272135]: <info> Prefix: JetBrains.ETW.Collector.Host
+[2024-10-21T21-47-53.380691]: <info> Request Host directories
+[2024-10-21T21-47-53.380729]: <info> Bridge, write command: get_dirs
+[2024-10-21T21-47-53.380758]: <info> Bridge, read answer async
+[2024-10-21T21-47-53.381105]: <info> Bridge, answer received: ok
+[2024-10-21T21-47-53.384775]: <info> Dump directory: C:\Users\New\JetBrainsTask\NewGitPlugin\Git
+[2024-10-21T21-47-53.384806]: <info> Log directory: C:\Users\New\JetBrainsTask\NewGitPlugin\Git
+[2024-10-21T21-47-53.384890]: <info> Prefix: JetBrains.DPA.Collector
+[2024-10-21T21-47-53.491332]: <info> Request Host directories
+[2024-10-21T21-47-53.491417]: <info> Bridge, write command: get_dirs
+[2024-10-21T21-47-53.491497]: <info> Bridge, read answer async
+[2024-10-21T21-47-53.491907]: <info> Bridge, answer received: ok
+[2024-10-21T21-47-53.492339]: <info> Dump directory: C:\Windows\TEMP\JetDumps
+[2024-10-21T21-47-53.492360]: <info> Log directory: C:\Windows\TEMP\JetLogs
+[2024-10-21T21-47-53.492379]: <info> Prefix: JetBrains.DPA.Collector.exe
+[2024-10-21T21-47-53.493112]: <info> Stop Elevation Host controller...
+[2024-10-21T21-47-53.493154]: <warning> Unable to wait for Elevation Host controller
+[2024-10-21T21-47-53.493335]: <info> Stop Elevation Host controller...
+[2024-10-21T21-47-53.493354]: <warning> Unable to wait for Elevation Host controller

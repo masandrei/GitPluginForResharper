@@ -1,0 +1,51 @@
+[2024-10-21T21-49-17.445926]: <info> Build version: 242.0.19990.21372.2024-09-24T11:52:24
+[2024-10-21T21-49-17.446080]: <info> Command line arguments: C:\Windows\TEMP\jetbrainsproc_088a88ed-2f63-405c-957a-6dcb9015a1b4\JetBrains.Dpa.Collector.exe -s 8 
+[2024-10-21T21-49-17.446518]: <info> pipes server: Host command arrived: 0
+[2024-10-21T21-49-17.446561]: <info> pipes server: Send protocol version 254
+[2024-10-21T21-49-17.446631]: <info> pipes server: Host command arrived: 3
+[2024-10-21T21-49-17.446687]: <info> pipes server: Skip arguments: -s 8 
+[2024-10-21T21-49-17.446877]: <info> pipes server: Host command arrived: 2
+[2024-10-21T21-49-17.447037]: <info> pipes server: Start listen clients
+[2024-10-21T21-49-17.564399]: <info> pipes server: Run client
+[2024-10-21T21-49-17.564955]: <info> clients communicator: 1 processing started
+[2024-10-21T21-49-17.938687]: <info> clients communicator: 1 command received:4
+[2024-10-21T21-49-17.938746]: <info> clients communicator: 1 start_collecting_processes, handle: 1792 client owner pid: 10132
+[2024-10-21T21-49-17.939066]: <info> events_multicast: add_handler
+[2024-10-21T21-49-17.939084]: <info> events_multicast: create consumer
+[2024-10-21T21-49-17.939095]: <info>  provider_start_info: guid: 22fb2cd6-0e7b-422b-a0c7-2fad1fd0e716 event_mask: 10
+[2024-10-21T21-49-17.939449]: <info> starting consumer: JetBrains-Dpa-Process-5988
+[2024-10-21T21-49-17.939626]: <debug> process_etw_events_handler: ~process_etw_events_handler gatherer: false
+[2024-10-21T21-49-17.939643]: <info> collector client: process session id: 0
+[2024-10-21T21-49-17.939654]: <info> clients communicator: 1 send answer ok, session_id:0
+[2024-10-21T21-49-29.365581]: <debug> process_info: OpenProcess failed: pid: 13936
+[2024-10-21T21-49-29.365637]: <debug> process_info: OpenProcess failed: pid: 9424
+[2024-10-21T21-49-29.365648]: <debug> process_info: OpenProcess failed: pid: 11988
+[2024-10-21T21-49-29.365676]: <debug> process_info: OpenProcess failed: pid: 8216
+[2024-10-21T21-49-29.365688]: <debug> process_info: OpenProcess failed: pid: 8900
+[2024-10-21T21-49-29.365699]: <debug> process_info: OpenProcess failed: pid: 1172
+[2024-10-21T21-49-29.365724]: <debug> process_info: OpenProcess failed: pid: 11632
+[2024-10-21T21-49-29.365736]: <debug> process_info: OpenProcess failed: pid: 10212
+[2024-10-21T21-49-29.365746]: <debug> process_info: OpenProcess failed: pid: 9424
+[2024-10-21T21-49-34.345172]: <debug> process_info: OpenProcess failed: pid: 9036
+[2024-10-21T21-49-34.345210]: <debug> process_info: OpenProcess failed: pid: 6608
+[2024-10-21T21-49-34.345221]: <debug> process_info: OpenProcess failed: pid: 10212
+[2024-10-21T21-49-34.345249]: <debug> process_info: OpenProcess failed: pid: 716
+[2024-10-21T21-49-34.345261]: <debug> process_info: OpenProcess failed: pid: 12892
+[2024-10-21T21-49-34.345272]: <debug> process_info: OpenProcess failed: pid: 3220
+[2024-10-21T21-49-36.388203]: <debug> process_info: OpenProcess failed: pid: 7092
+[2024-10-21T21-49-36.388233]: <debug> process_info: OpenProcess failed: pid: 7356
+[2024-10-21T21-49-36.388245]: <debug> process_info: OpenProcess failed: pid: 6700
+[2024-10-21T21-49-36.388272]: <debug> process_info: OpenProcess failed: pid: 11460
+[2024-10-21T21-49-36.388284]: <debug> process_info: OpenProcess failed: pid: 12664
+[2024-10-21T21-49-36.388294]: <debug> process_info: OpenProcess failed: pid: 716
+[2024-10-21T21-49-38.506236]: <info> clients communicator: 1 command received:5
+[2024-10-21T21-49-38.506275]: <info> clients communicator: 1 stop_collecting, session_id: 0
+[2024-10-21T21-49-38.506289]: <info> collector client: stop_collecting, session_id:0
+[2024-10-21T21-49-38.506301]: <info> etw collector client: stop process_events_consumer_, session_id:0
+[2024-10-21T21-49-38.506313]: <info> events_multicast: remove_handler
+[2024-10-21T21-49-38.506323]: <debug> process_etw_events_handler: ~process_etw_events_handler gatherer: true
+[2024-10-21T21-49-38.506354]: <info> events_multicast: reset consumer not required
+[2024-10-21T21-49-38.506929]: <info> consumer stopped: JetBrains-Dpa-Process-5988
+[2024-10-21T21-49-38.507033]: <info> etw collector client: consumers stopped, session_id:0
+[2024-10-21T21-49-38.507062]: <info> collector client: collecting stopped, session_id:0
+[2024-10-21T21-49-38.507074]: <info> clients communicator: 1 send answer ok
